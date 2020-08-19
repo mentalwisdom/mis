@@ -1,0 +1,74 @@
+.header {
+    text-align: center;
+    color: green;
+    padding-bottom: 35px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  
+}
+
+td,
+th{
+    border: 30px solid gray;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+}
+p{
+     font-size: 250px;
+     text-align: left;
+}
+
+table th  {
+    background-color: lightblue;
+    color: white;
+  
+}
+.candidate_pic {
+       border: 1px solid burlywood;
+       width: 100px;
+       height: 100px;
+       margin-top: 5px;
+}
+.qr_pic {
+    border: 2px solid red;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+ 
+}
+ 
+.h3{
+    width: 3000px;
+    height: 3000px;
+}
+.row_focus{
+     background-color: #f8c146;
+     color: white;
+     padding: 150px;
+     font-size: 300px;
+     text-align: left;
+     
+    
+}
+br{
+    width: 500px;
+    height: 500px;
+}
+.text{
+ 
+  padding: 15px;
+  font-size: 20px;
+  text-align: left;
+}
+.text_header {
+
+    padding: 15px;
+    font-size: 25px;
+    color: blue;
+    text-align: left;
+}
+ 

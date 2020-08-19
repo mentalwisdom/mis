@@ -1,0 +1,24 @@
+@model MIS.Models.ProductGroup
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-arrow">
+    <li class="breadcrumb-item"><a href="/productgroup/index">productgroup</a></li>
+    <li class="breadcrumb-item active" aria-current="page">detail</li>
+  </ol>
+</nav>
+<hr/>
+<div>
+    <h4>ProductGroup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.product_group_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.product_group_name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.product_group_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

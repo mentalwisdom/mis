@@ -1,0 +1,56 @@
+@model MIS.Models.ProductOrder
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-arrow">
+     <li class="breadcrumb-item"><a href="/productorder/index">productorder</a></li>
+    <li class="breadcrumb-item active" aria-current="page">edit</li>
+  </ol>
+</nav>
+<hr/>
+<h4>ProductOrder</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="product_order_id" />
+            <div class="form-group">
+                <label class="control-label">product id</label>
+                <select asp-for="product_id" class="form-control" asp-items="ViewBag.product_id"></select>
+                <span asp-validation-for="product_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">qty</label>
+                <input asp-for="qty" class="form-control" />
+                <span asp-validation-for="qty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">firstname</label>
+                <input asp-for="firstname" class="form-control" />
+                <span asp-validation-for="firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">lastname</label>
+                <input asp-for="lastname" class="form-control" />
+                <span asp-validation-for="lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">email</label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">order status id</label>
+                <select asp-for="order_status_id" class="form-control" asp-items="ViewBag.order_status_id"></select>
+                <span asp-validation-for="order_status_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default btn-outline-warning" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

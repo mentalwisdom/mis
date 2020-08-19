@@ -1,0 +1,51 @@
+@model MIS.Models.Product
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-arrow">
+    <li class="breadcrumb-item"><a href="/product/index">product</a></li>
+    <li class="breadcrumb-item active" aria-current="page">delete</li>
+  </ol>
+</nav>
+<hr/>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.product_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.product_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.qty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.qty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.productGroup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.productGroup.product_group_id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.pic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.pic)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="product_id" />
+        <input type="submit" value="Delete" class="btn btn-default btn-outline-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

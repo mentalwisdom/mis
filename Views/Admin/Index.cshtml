@@ -1,0 +1,25 @@
+ <div class="text-center">
+
+   <h4>Welcome @ViewBag.user</h4>
+
+   <div class="container">
+     <div class="row">
+       <div class="col-12 col-md-4 col-sm-6">
+         <h5>Business Entity</h5>
+               <a class="btn btn-outline-success btn-block " href="/productgroup">
+           <i class="fa fa-atom float-left mt-1"></i>
+            Product group
+           <span class="badge badge-info float-right mt-1"> @ViewBag.productgroups</span>
+           </a>
+          <a class="btn btn-outline-success btn-block " href="/product">
+           <i class="fa fa-atom float-left mt-1"></i>
+           Product
+           <span class="badge badge-info float-right mt-1"> @ViewBag.Products</span>
+           </a>
+       
+       </div>   
+
+     </div>
+
+   </div>
+ </div>

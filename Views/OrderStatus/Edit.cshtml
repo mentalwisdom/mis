@@ -1,0 +1,31 @@
+@model MIS.Models.OrderStatus
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-arrow">
+     <li class="breadcrumb-item"><a href="/orderstatus/index">orderstatus</a></li>
+    <li class="breadcrumb-item active" aria-current="page">edit</li>
+  </ol>
+</nav>
+<hr/>
+<h4>OrderStatus</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="order_status_id" />
+            <div class="form-group">
+                <label  class="control-label">order status name</label>
+                <input asp-for="order_status_name" class="form-control" />
+                <span asp-validation-for="order_status_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default btn-outline-warning" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,23 @@
+@model IEnumerable<MIS.Models.Report1Model>
+<h2>Report 1</h2>
+<hr>
+<!-- how to have access to the return result and then use it for display data in the table razor -->
+<H5>total orders: @ViewBag.total_order</H5> 
+<table class="table table-striped">
+    <tr>
+        <td>customer</td>
+        <td>product</td>
+        <td>total</td>
+        <td>status</td>
+    </tr>
+     
+    @foreach(var order in Model){
+         <tr>
+        <td>@order.customer</td>
+        <td>@order.name</td>
+        <td>@order.total</td>
+        <td>@order.status</td>
+    </tr>
+
+    }
+</table>

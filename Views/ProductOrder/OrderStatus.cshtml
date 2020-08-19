@@ -1,0 +1,12 @@
+<h2> Order Status:</h2>
+ <!--server side rendering/displaying technique in software engineering -->
+@if(ViewBag.error){
+    <div style="background-color:red;">@ViewBag.msg</div>
+}
+else{
+    <div style="background-color:green;">sucess</div>
+    <h4>customer: @ViewBag.full_name</h4>
+    <h4>order status: @ViewBag.order_status </h4>
+    <h4>product: @ViewBag.product_name </h4>
+    <h4>order order amount: @ViewBag.qty</h4>
+}

@@ -1,0 +1,40 @@
+@model IEnumerable<MIS.Models.OrderStatus>
+
+@{ int count =0;}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li class="breadcrumb-item active" aria-current="page">OrderStatus</li>
+    </ol>
+</nav>
+<hr>    
+<a asp-action="Create" class="btn button btn-outline-success">
+    <i class="fa fa-plus"></i>
+        Create
+</a>
+<br>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                
+                order status name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.order_status_name
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.order_status_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.order_status_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.order_status_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

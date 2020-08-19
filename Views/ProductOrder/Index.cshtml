@@ -1,0 +1,73 @@
+@model IEnumerable<MIS.Models.ProductOrder>
+
+@{ int count =0;}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li class="breadcrumb-item active" aria-current="page">ProductOrder</li>
+    </ol>
+</nav>
+<hr>    
+<a asp-action="Create" class="btn button btn-outline-success">
+    <i class="fa fa-plus"></i>
+        Create
+</a>
+<br>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                product
+            </th>
+            <th>
+                
+                qty
+            </th>
+            <th>
+                
+                firstname
+            </th>
+            <th>
+                
+                lastname
+            </th>
+            <th>
+                
+                email
+            </th>
+            <th>
+                orderStaus
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.product.product_id)
+            </td>
+            <td>
+                @item.qty
+            </td>
+            <td>
+                @item.firstname
+            </td>
+            <td>
+                @item.lastname
+            </td>
+            <td>
+                @item.email
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orderStaus.order_status_name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.product_order_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.product_order_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.product_order_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

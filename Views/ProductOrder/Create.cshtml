@@ -1,0 +1,50 @@
+@model MIS.Models.ProductOrder
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-arrow">
+    <li class="breadcrumb-item"><a href="/productorder/index">productorder</a></li>
+    <li class="breadcrumb-item active" aria-current="page">create</li>
+  </ol>
+</nav>
+<hr/>    
+<h4>ProductOrder</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label  class="control-label">@Html.DisplayNameFor(model => model.product_id)</label>
+                <select asp-for="product_id" class ="form-control" asp-items="ViewBag.product_id"></select>
+            </div>
+            <div class="form-group">
+                <label  class="control-label"> @Html.DisplayNameFor(model => model.qty)</label>
+                <input asp-for="qty" class="form-control" />
+                <span asp-validation-for="qty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label"> @Html.DisplayNameFor(model => model.firstname)</label>
+                <input asp-for="firstname" class="form-control" />
+                <span asp-validation-for="firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label"> @Html.DisplayNameFor(model => model.lastname)</label>
+                <input asp-for="lastname" class="form-control" />
+                <span asp-validation-for="lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label"> @Html.DisplayNameFor(model => model.email)</label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+        
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default btn-outline-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,6 @@
+- make registration page
+- save registration to local storage
+- send token along with registration info
+- save token to local store
+- send order all send token
+- 
